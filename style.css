@@ -26,3 +26,28 @@ button {
     background-color: sandybrown;
     cursor: pointer;
 }
+
+/* =========== */
+
+.row {
+    min-width: 1000px;
+    border: 2px solid red;
+    display: flex;
+}
+
+
+.imageBig{
+    width: 600px;
+    height: 600px;
+    margin: 25px;
+    border: 2px solid yellow;
+}
+
+.row .images {
+    margin: 10px;
+}
+
+.imageBig img {
+    width: 500px;
+    height: 500px;
+}

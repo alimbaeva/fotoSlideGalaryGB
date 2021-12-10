@@ -22,5 +22,30 @@ window.addEventListener('load', function () {
 
 
 
+    const fotoAddres_2 = ['./img/ma_1.svg', './img/ma_2.svg', './img/ma_3.svg'];
+
+    const fotoMin = this.document.querySelectorAll('.imgMin');
+    const imageBig = this.document.querySelector('.imageBig');
+    fotoMin.forEach(function (i) {
+        i.addEventListener('click', () => {
+            const pathImg = i.getAttribute('src');
+
+            if (pathImg) {
+                var imgBIG = '';
+                fotoAddres_2.forEach(function (path) {
+                    if (path === pathImg) {
+                        imgBIG = path;
+                    }
+                })
+            }
+            if (imgBIG) {
+                imageBig.innerHTML = `<img  src="${imgBIG}" alt="">`;
+            } else {
+                imageBig.innerHTML = `<h3>Такой картинки нету</h3>`;
+            }
+        })
+    })
+
+    console.log(fotoMin);
 
 })
